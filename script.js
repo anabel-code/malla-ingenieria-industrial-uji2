@@ -1,15 +1,15 @@
 const subjects = [
   // PRIMER AÑO
-  { code: "ET1001", name: "Álgebra", year: 1, unlocks: [ET1016] },
-  { code: "ET1002", name: "Cálculo I", year: 1, unlocks: [ET1011] },
-  { code: "ET1003", name: "Informática", year: 1, unlocks: [ET1013] },
+  { code: "ET1001", name: "Álgebra", year: 1, unlocks: ["ET1016"] },
+  { code: "ET1002", name: "Cálculo I", year: 1, unlocks: ["ET1011"] },
+  { code: "ET1003", name: "Informática", year: 1, unlocks: ["ET1013"] },
   { code: "ET1004", name: "Física I", year: 1, unlocks: ["ET1012"] },
-  { code: "ET1005", name: "Inglés Científico-Técnico", year: 1, unlocks: [ET1014] },
-  { code: "ET1006", name: "Química", year: 1, unlocks: [ET1015] },
-  { code: "ET1007", name: "Cálculo II", year: 1, unlocks: [ET1017] },
+  { code: "ET1005", name: "Inglés Científico-Técnico", year: 1, unlocks: ["ET1014"] },
+  { code: "ET1006", name: "Química", year: 1, unlocks: ["ET1015"] },
+  { code: "ET1007", name: "Cálculo II", year: 1, unlocks: ["ET1017"] },
   { code: "ET1008", name: "Física II", year: 1, unlocks: ["ET1020"] },
-  { code: "ET1009", name: "Expresión Gráfica", year: 1, unlocks: [ET1018] },
-  { code: "ET1010", name: "Historia de la Ciencia", year: 1, unlocks: [ET1019] },
+  { code: "ET1009", name: "Expresión Gráfica", year: 1, unlocks: ["ET1018"] },
+  { code: "ET1010", name: "Historia de la Ciencia", year: 1, unlocks: ["ET1019"] },
 
   // SEGUNDO AÑO
   { code: "ET1011", name: "Estadística y Optimización", year: 2, unlocks: ["ET1023"] },
