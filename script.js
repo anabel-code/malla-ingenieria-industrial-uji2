@@ -33,7 +33,7 @@ const subjects = [
   { code: "ET1029", name: "Tecnología de Fabricación", year: 3, unlocks: ["ET1034"] },
   { code: "ET1030", name: "Automatización Industrial", year: 3, unlocks: ["ET1039"] },
   { code: "ET1032", name: "Informática Industrial", year: 3, unlocks: ["ET1040"] },
-  { code: "ET1033", name: "Medio Ambiente y Seguridad", year: 3, unlocks: [] },
+  { code: "ET1033", name: "Medio Ambiente y Seguridad", year: 3, unlocks: ["ET1035"] },
 
   // CUARTO AÑO
   { code: "ET1021", name: "Instalaciones Eléctricas", year: 4, unlocks: [] },
