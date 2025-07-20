@@ -50,19 +50,7 @@ button {
   opacity: 0.6;
 }
 
-.card.approved-year-1 {
-  background-color: #f578bb; /* Rosa */
-  text-decoration: line-through;
-}
-.card.approved-year-2 {
-  background-color: #78d6f5; /* Azul */
-  text-decoration: line-through;
-}
-.card.approved-year-3 {
-  background-color: #8ff578; /* Verde */
-  text-decoration: line-through;
-}
-.card.approved-year-4 {
-  background-color: #f5e278; /* Amarillo */
+.card.approved {
+  background-color: #f578bb;
   text-decoration: line-through;
 }
