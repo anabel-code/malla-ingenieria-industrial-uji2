@@ -83,8 +83,9 @@ function render() {
         card.innerHTML = `<strong>${subject.code}</strong><br>${subject.name}`;
 
         if (approved.has(subject.code)) {
-          card.classList.add("approved");
-        } else if (!isUnlocked(subject)) {
+  card.classList.add("approved", `approved-year-${subject.year}`);
+}
+ else if (!isUnlocked(subject)) {
           card.classList.add("locked");
         } else {
           card.addEventListener("click", () => {
