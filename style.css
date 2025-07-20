@@ -50,10 +50,6 @@ button {
   opacity: 0.6;
 }
 
-.card.approved {
-  background-color: #f578bb;
-  text-decoration: line-through;
-}
 /* Colores de tachado por curso */
 .approved-year-1 {
   background-color: #a2d2ff;
