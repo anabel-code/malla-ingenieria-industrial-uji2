@@ -54,3 +54,20 @@ button {
   background-color: #f578bb;
   text-decoration: line-through;
 }
+/* Colores de tachado por curso */
+.approved-year-1 {
+  background-color: #a2d2ff;
+  text-decoration: line-through;
+}
+.approved-year-2 {
+  background-color: #caffbf;
+  text-decoration: line-through;
+}
+.approved-year-3 {
+  background-color: #ffd6a5;
+  text-decoration: line-through;
+}
+.approved-year-4 {
+  background-color: #ffadad;
+  text-decoration: line-through;
+}
