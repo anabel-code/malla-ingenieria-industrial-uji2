@@ -50,20 +50,19 @@ button {
   opacity: 0.6;
 }
 
-/* Colores de tachado por curso */
-.approved-year-1 {
-  background-color: #a2d2ff;
+.card.approved-year-1 {
+  background-color: #f578bb; /* Rosa */
   text-decoration: line-through;
 }
-.approved-year-2 {
-  background-color: #caffbf;
+.card.approved-year-2 {
+  background-color: #78d6f5; /* Azul */
   text-decoration: line-through;
 }
-.approved-year-3 {
-  background-color: #ffd6a5;
+.card.approved-year-3 {
+  background-color: #8ff578; /* Verde */
   text-decoration: line-through;
 }
-.approved-year-4 {
-  background-color: #ffadad;
+.card.approved-year-4 {
+  background-color: #f5e278; /* Amarillo */
   text-decoration: line-through;
 }
