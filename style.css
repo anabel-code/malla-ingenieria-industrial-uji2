@@ -9,12 +9,30 @@ h1 {
   color: #333;
 }
 
-#grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.course-section {
+  margin-bottom: 40px;
   max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.course-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
 .card {
@@ -33,6 +51,6 @@ h1 {
 }
 
 .card.approved {
-  background-color: #fa89d8;
+  background-color: #f578bb;
   text-decoration: line-through;
 }
