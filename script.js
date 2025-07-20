@@ -60,32 +60,51 @@ function saveProgress() {
 }
 
 function render() {
+  const container = document.getElementById("courses-container");
   container.innerHTML = "";
-  subjects.forEach(subject => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `<strong>${subject.code}</strong><br>${subject.name}`;
 
-    if (approved.has(subject.code)) {
-      card.classList.add(`approved-year-${subject.year}`);
-    } else if (!isUnlocked(subject)) {
-      card.classList.add("locked");
-    } else {
-      card.addEventListener("click", () => {
+  for (let year = 1; year <= 4; year++) {
+    const section = document.createElement("div");
+    section.className = "course-section";
+
+    const title = document.createElement("h2");
+    title.className = "course-title";
+    title.textContent = `${year}º Curso`;
+    section.appendChild(title);
+
+    const grid = document.createElement("div");
+    grid.className = "grid";
+
+    subjects
+      .filter(s => s.year === year)
+      .forEach(subject => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `<strong>${subject.code}</strong><br>${subject.name}`;
+
         if (approved.has(subject.code)) {
-          approved.delete(subject.code);
+          card.classList.add("approved");
+        } else if (!isUnlocked(subject)) {
+          card.classList.add("locked");
         } else {
-          approved.add(subject.code);
+          card.addEventListener("click", () => {
+            if (approved.has(subject.code)) {
+              approved.delete(subject.code);
+            } else {
+              approved.add(subject.code);
+            }
+            saveProgress();
+            render();
+          });
         }
-        saveProgress();
-        render();
+
+        grid.appendChild(card);
       });
-    }
 
-    container.appendChild(card);
-  });
+    section.appendChild(grid);
+    container.appendChild(section);
+  }
 }
-
 
 function clearProgress() {
   localStorage.removeItem("approvedSubjects");
