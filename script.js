@@ -67,7 +67,7 @@ function updateCreditCounter() {
 function render() {
   const container = document.getElementById("courses-container");
   container.innerHTML = "";
-
+updateCreditCounter();
   for (let year = 1; year <= 4; year++) {
     const section = document.createElement("div");
     section.className = "course-section";
@@ -114,6 +114,7 @@ function render() {
 function clearProgress() {
   localStorage.removeItem("approvedSubjects");
   approved = new Set();
+  updateCreditCounter();
   render();
 }
 
