@@ -58,6 +58,11 @@ function isUnlocked(subject) {
 function saveProgress() {
   localStorage.setItem("approvedSubjects", JSON.stringify([...approved]));
 }
+function updateCreditCounter() {
+  const credits = approved.size * 6;
+  const counter = document.getElementById("creditCounter");
+  counter.textContent = `Créditos aprobados: ${credits} / 240`;
+}
 
 function render() {
   const container = document.getElementById("courses-container");
