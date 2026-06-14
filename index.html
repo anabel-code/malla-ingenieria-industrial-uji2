@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malla Interactiva - Ingeniería UJI</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Malla Interactiva - Ingeniería UJI</title>
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Malla Interactiva - Ingeniería en Tecnologías Industriales (UJI)</h1>
-  <button onclick="clearProgress()">Borrar progreso</button>
+<h1>Malla Interactiva - Ingeniería en Tecnologías Industriales (UJI)</h1>
+<button onclick="clearProgress()">Borrar progreso</button>
 <h2 id="creditCounter">Créditos aprobados: 0 / 240</h2>
-  <div id="courses-container"></div>
+<div id="courses-container"></div>
 
-  <script src="script.js"></script>
+<div id="gradeModal" class="modal">
+<div class="modal-content">
+<span class="close-btn" onclick="closeGradeModal()">&times;</span>
+<h3 id="modalSubjectTitle">Asignatura</h3>
+<p>Nota actual: <span id="currentGradeDisplay">Sin calificar</span></p>
+<input type="number" id="gradeInput" step="0.1" min="0" max="10" placeholder="Introduce la nota (0-10)">
+<button onclick="saveGrade()">Guardar Nota</button>
+<button onclick="removeGrade()">Borrar Nota</button>
+</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
