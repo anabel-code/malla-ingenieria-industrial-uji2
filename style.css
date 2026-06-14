@@ -54,9 +54,10 @@ opacity: 0.6;
 
 .card.approved {
 background-color: #f578bb;
+}
+.card.approved .subject-info { 
 text-decoration: line-through;
 }
-
 /* Estilos para el botón de opciones (tres puntitos) */
 .options-btn {
 position: absolute;
