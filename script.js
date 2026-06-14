@@ -95,7 +95,7 @@ const card = document.createElement("div");
 card.className = "card";
 
 // Estructura base de la tarjeta
-let cardHTML = `<strong>${subject.code}</strong><br>${subject.name}`;
+let cardHTML = `<div class="subject-info"><strong>${subject.code}</strong><br>${subject.name}</div>`;
 
 // Si tiene nota guardada, la mostramos en la tarjeta
 if (grades[subject.code] !== undefined) {
