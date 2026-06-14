@@ -1,56 +1,136 @@
 body {
-  font-family: sans-serif;
-  background-color: #f5f5f5;
-  padding: 20px;
+font-family: sans-serif;
+background-color: #f5f5f5;
+padding: 20px;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
+text-align: center;
+color: #333;
 }
 
 button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 15px;
-  font-size: 16px;
+display: block;
+margin: 20px auto;
+padding: 10px 15px;
+font-size: 16px;
+cursor: pointer;
 }
 
 .course-section {
-  margin-bottom: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+margin-bottom: 40px;
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
 }
 
 .course-title {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  color: #444;
+font-size: 1.5em;
+margin-bottom: 15px;
+color: #444;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 15px;
 }
 
 .card {
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  cursor: pointer;
-  transition: background-color 0.3s;
+background-color: white;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+cursor: pointer;
+transition: background-color 0.3s;
+position: relative; /* Necesario para posicionar los puntitos */
 }
 
 .card.locked {
-  background-color: #ddd;
-  cursor: not-allowed;
-  opacity: 0.6;
+background-color: #ddd;
+cursor: not-allowed;
+opacity: 0.6;
 }
 
 .card.approved {
-  background-color: #f578bb;
-  text-decoration: line-through;
+background-color: #f578bb;
+text-decoration: line-through;
 }
+
+/* Estilos para el botón de opciones (tres puntitos) */
+.options-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+background: none;
+border: none;
+font-size: 20px;
+cursor: pointer;
+color: #555;
+padding: 0 5px;
+border-radius: 5px;
+}
+
+.options-btn:hover {
+background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para mostrar la nota en la tarjeta (opcional, pero queda bien) */
+.grade-badge {
+display: block;
+margin-top: 10px;
+font-size: 0.9em;
+color: #333;
+font-weight: bold;
+}
+
+/* Estilos del Modal */
+.modal {
+display: none; /* Oculto por defecto */
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+max-width: 400px;
+border-radius: 10px;
+text-align: center;
+}
+
+.close-btn {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+color: black;
+text-decoration: none;
+}
+
+.modal-content input {
+padding: 8px;
+margin: 10px 0;
+width: 80%;
+font-size: 16px;
+}
+
+.modal-content button {
+margin: 5px auto;
+width: 80%;
+}
+
